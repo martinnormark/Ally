@@ -1,0 +1,51 @@
+<div class="flex-none w-64 h-full p-4 bg-indigo-800">
+
+	<div class="flex justify-between mb-6">
+		<div class="text-white">
+			<span class="font-semibold text-3xl tracking-widest uppercase mr-1 mb-2">Ally.Web <i-feather name="shield"></i-feather></span>
+		</div>
+	</div>
+
+	<a class="p-2 -mx-2 transition-fast relative block hover:bg-blue-700 hover:translate-r-2px hover:text-gray-200 text-gray-100 font-medium" routerLink="/" routerLinkActive="bg-blue-600" [routerLinkActiveOptions]="{exact: true}">
+		<i-feather name="radio" class="nav-link-icon"></i-feather> <span class="relative">Dashboard</span>
+	</a>
+
+	<ng-template ngFor let-group [ngForOf]="menuItems" let-i="index">
+		<h5 class="mt-6 mb-2 lg:mb-2 text-indigo-500 uppercase tracking-wide font-bold text-sm lg:text-xs">{{ group.groupName }}</h5>
+		<ul>
+			<li class="mb-3 lg:mb-1" *ngFor="let item of group.items;">
+				<a class="p-2 -mx-2 transition-fast relative block hover:bg-blue-700 hover:translate-r-2px hover:text-gray-200 text-gray-100 font-medium" [routerLink]="item.route" routerLinkActive="bg-blue-600">
+					<i-feather name="{{ item.icon }}" class="nav-link-icon"></i-feather> <span class="relative">{{ item.title }}</span>
+				</a>
+			</li>
+		</ul>
+	</ng-template>
+
+	<!-- <div class="flex-grow-1">
+		<ul class="nav nav-pills flex-column mt-3">
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fas fa-heartbeat"></i> <span>Dashboard</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/activity']" routerLinkActive="active"><i class="fas fa-paper-plane"></i> <span>Activity</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/alerts']" routerLinkActive="active"><i class="fas fa-bell"></i> <span>Alerts</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/automation']" routerLinkActive="active"><i class="fas fa-robot"></i> <span>Automation</span></a>
+			</li>
+			<li class="nav-item"><hr></li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/team']" routerLinkActive="active"><i class="fas fa-users"></i> <span>Team</span></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="flex-shrink-1">
+		<button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+		<button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+		<a routerLink="auth/profile" *ngIf="auth.loggedIn"><img class="user-avatar" src="https://placeimg.com/75/75/people?t=1569787241942"></a>
+	</div> -->
+
+</div>

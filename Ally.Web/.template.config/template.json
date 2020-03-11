@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "martinnormark",
+    "classifications": [ "Common", "Web", "C#8" ],
+    "identity": "Ally.Web",
+	"sourceName": "Ally.Web",
+    "name": "ASP.NET Core Angular app",
+    "shortName": "aspnetapp",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
